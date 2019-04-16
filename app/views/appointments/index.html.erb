@@ -7,12 +7,18 @@
     <th>Patient Name</th>
     <th>Doctor Name</th>
     <th>Reason for Visit</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
   <% @appointments.each do |appointment| %>
     <tr>
       <td><%= appointment.patient.name %></td>
       <td><%= appointment.doctor.name %></td>
       <td><%= appointment.reason %></td>
+      <td><%= link_to "Show", appointment %></td>
+      <td><%= link_to "Edit", edit_appointment_path(appointment) %></td>
+      <td><%= link_to "Delete", appointment, method: :delete, data: {confirm: "Ebere... Are you Sure?"} %></td>
     </tr>
   <% end %>
 </table>

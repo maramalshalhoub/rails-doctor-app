@@ -1,0 +1,7 @@
+<h1>Show</h1>
+
+Doctor: <%= @appointment.doctor.name %> <br>
+Patient: <%= @appointment.patient.name %> <br>
+Reason: <%= @appointment.reason %>
+
+<%= link_to "All Appointments", appointments_path %>
