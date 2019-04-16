@@ -1,0 +1,17 @@
+<%= form_with(model: @appointment, local: true) do |form| %>
+
+  <div class="field">
+    Doctor: <%= form.collection_select(:doctor_id, Doctor.all, :id, :name) %>
+  </div>
+  
+  <div class="field">
+    Patient: <%= form.collection_select(:patient_id, Patient.all, :id, :name) %>
+  </div>
+  
+  <div class="field">
+    Reason: <%= form.text_field :reason %>
+  </div>
+  
+  <%= submit_tag("Create New Appointment") %>
+  
+  <% end %>

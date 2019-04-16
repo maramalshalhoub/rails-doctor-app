@@ -1,5 +1,7 @@
 <h1>All Appointments</h1>
 
+<%= link_to "New Appointment", new_appointment_path %>
+
 <table>
   <tr>
     <th>Patient Name</th>
@@ -9,7 +11,7 @@
   <% @appointments.each do |appointment| %>
     <tr>
       <td><%= appointment.patient.name %></td>
-      <td><%= appointment.doctor_id %></td>
+      <td><%= appointment.doctor.name %></td>
       <td><%= appointment.reason %></td>
     </tr>
   <% end %>
