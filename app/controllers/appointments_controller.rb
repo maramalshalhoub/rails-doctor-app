@@ -13,6 +13,14 @@ class AppointmentsController < ApplicationController
     redirect_to appointments_path
   end
 
+  def edit
+    @appointment = Appointment.find(params[:id])
+  end
+
+  def update
+    
+  end
+
   private
 
     def appointment_params
