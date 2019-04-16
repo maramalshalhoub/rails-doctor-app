@@ -11,5 +11,13 @@
 
   <body>
     <%= yield %>
+
+    <script>
+      console.log("Hello World!")
+
+      var name = "<%= @name %>"
+      var reason = "<%= @appointment.reason %>"
+      console.log(name);
+    </script>
   </body>
 </html>
